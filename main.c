@@ -4,21 +4,35 @@
  *
  * Created on 9 de abril de 2024, 12:40
  */
-
-
 #include "header.h"
 
 void main(void) {
-     
-    pinmode(2,"OUPUT");
-    pinmode(1,"OUPUT");
-    pinmode(3,"INPUT");
+    pioinit();
     
-     digitalwrite(2, 1 );
-     while(1){
-        digitalwrite(1, digitalread(3) );
-     }
+    while(1){
+         //ESTRUCTURA MAQUINA ESTADOS
+        switch (state){
+            case ESPERA:
+                digitalwrite(BUZZ,LOW);
+                digitalwrite(RX,HIGH);
+                break;
+            case F1K:
+                digitalwrite(RX,LOW);
+                break;
+            case F2K:
+                break;
+            case F4K:
+                break;
+            case F8K:
+                break;
+            case F16K:
+                digitalwrite(BUZZ,HIGH);
+                break;
+            default: state=ESPERA;
+        }
+        //estas sentancias se ejecutan siempre en el bucle
+        button();
+        blink();  
+        one_minute();
+    } //fin superbucle   
 }
-
-
-
