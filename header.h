@@ -1,5 +1,5 @@
-#ifndef heder
-#define	heder
+#ifndef header
+#define	header
 
 //Define (no tocar nombres)
 #define  TRI  0b00001010  //define estado pines I/O
@@ -32,7 +32,8 @@ char state = ESPERA;  //estado maquina
 //My HEDERS
 void digitalwrite (unsigned char,unsigned char);
 char digitalread (unsigned char);
-void pioinit (void);
+void init (void);
+void controlBuzz(void);
 
 void blink (void);
 void button  (void);
@@ -42,4 +43,3 @@ void one_minute (void);
 
 
 #endif	
-

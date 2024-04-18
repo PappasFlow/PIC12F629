@@ -37,6 +37,21 @@ void button  (void){
         count=1;}
         
 }
+void controlBuzz(void){
+    char frec[6]={0,16,8,4,2,1};
+    static char toogle =0;
+    static char contador =0;
+    contador =+1; 
+    
+        if(contador >= frec[state]){
+        toogle= !toogle;
+        GPIO5 =(__bit)toogle;
+        contador=0;
+        }else if(state==0){
+        GPIO5 =0;
+        contador=0;
+       }
+}
 
 
 // cuenta un tiempo desde que se suelta el boton y si se cumple vuelve a estado espera
