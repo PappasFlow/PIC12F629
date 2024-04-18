@@ -5,7 +5,7 @@
  * Created on 9 de abril de 2024, 12:40
  */
 #include "header.h"
-#define _XTAL_FREQ 4000000
+
 void __interrupt() ISR() {  
 }
 
