@@ -67,5 +67,6 @@ void controlBuzz(void){
             contador=0;
         }else if(state==ESPERA){
             BUZZ =0;
+            contador=0;
        }
 }
