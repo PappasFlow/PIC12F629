@@ -1,24 +1,16 @@
-#ifndef heder
-#define	heder
+#ifndef header
+#define	header
 
-
-#define TX GPIO0 //Nombre de pines debe tener coherencia con TRI
-#define RX GPIO1
-#define NC GPIO2
-#define BOTON GPIO3
-#define LED GPIO4
-#define BUZZ GPIO5
-
+//Define (no tocar nombres)
 #define  TRI  0b00001010  //define estado pines I/O
-
+#define _XTAL_FREQ 4000000
+enum PINS {TX,RX,NC,BOTON,BUZZ,LED}; //Nombre de pines debe tener coherencia con TRI
 enum ESTADOS {ESPERA,F1K,F2K,F4K,F8K,F16K}; //Nombre de estados
 enum STATES{LOW,HIGH}; //para declarar estados mas claro
 
-#define _XTAL_FREQ 4000000
 #define TIME_BLINK  1000  //define tiempo parpadeo led
 #define TIME_BUTTON 7000  //define tiempo pulsador para cambiar de estado
 #define TIME_MINUTE 30000 //define tiempo para reset 
-#define TIME_FREC  1 //ajusta tiempo frecuencia 
 
 //varibles globales
 char state = ESPERA;  //estado maquina
@@ -38,13 +30,14 @@ char state = ESPERA;  //estado maquina
 #include <xc.h> // include processor files - each processor file is guarded.  
 
 
-//My HEDERS
-void init (void);
 
+void init (void);
+void carga (void);
 void blink (void);
 void button  (void);
-void one_minute (void);
-void controlBuzz(void);
+void one_Second(void);
+void send(void);
+void recieve(void);
 
 
 
