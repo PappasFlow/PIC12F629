@@ -1,16 +1,15 @@
-/*
- * File:   PIC12F629_TDII.c
- * Author: joaquin and juan 
- *
- * Created on 9 de abril de 2024, 12:40
- */
 #include "header.h"
+
+
 void __interrupt() ISR() { 
-     if (T0IF) { 
+    if (T0IF) { 
          static char contador = 0;
-         if(contador  >= 16){
-             one_Second();
+         blink();
+         if(contador  >= 16){//entra cada 1 seg
+             TX_frec();
              contador=0;
+             button();  
+             one_minute();
          } else 
              contador++;
          TMR0 = 0;
@@ -21,39 +20,32 @@ void __interrupt() ISR() {
 
 void main(void) {
     init();
-    carga();
     while(1){
-     if(state >= 5)
-    state = 0;
-    else
-    state++;
-     send();
-     __delay_ms(500);
-        /*
-        switch(state) {
-            case 0:
-                GPIO5 = 0;
+         switch(state) {
+            case ESPERA:
+                BUZZ = 0;
                 break;
-            case 1:
-                GPIO4 ^= 1;
-                __delay_us(500);
+            case F1K:
+                BUZZ ^= 1;
+                __delay_us(TIME_FREC*16);
                 break;
-            case 2:
-              GPIO4 ^= 1;
-              __delay_us(250);
+            case F2K:
+                BUZZ ^= 1;
+                __delay_us(TIME_FREC*8);
             break;
-            case 3:
-               GPIO4 ^= 1;
-               __delay_us(128);
+            case F4K:
+                BUZZ ^= 1;
+                __delay_us(TIME_FREC*4);
                break;
-            case 4:
-            GPIO4 ^= 1;
-            __delay_us(64);
-             break;
-             case 5:
-                GPIO4 ^= 1;
-                __delay_us(32);
-            break;
-         }    */
-    }
+            case F8K:
+                BUZZ ^= 1;
+                __delay_us(TIME_FREC*2);
+                break;
+             case F16K:
+                BUZZ ^= 1;
+                __delay_us(TIME_FREC);
+                break;
+             default:state=ESPERA;}
+    } //fin superbucle  
+    
 }
