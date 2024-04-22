@@ -3,18 +3,19 @@
 
 
 #define NC GPIO0 //Nombre de pines debe tener coherencia con TRI
-#define RX GPIO1
-#define LED GPIO2
+#define LED GPIO1
+#define RX GPIO2
 #define BOTON GPIO3
 #define TX GPIO4
 #define BUZZ GPIO5
 
-#define  TRI  0b00001010  //define estado pines I/O
+#define  TRI  0b00001100  //define estado pines I/O
 
 enum ESTADOS {ESPERA,F1K,F2K,F4K,F8K,F16K}; //Nombre de estados
 enum STATES{LOW,HIGH}; //para declarar estados mas claro
 
 #define BAUDIOS 100 //define tiempo para uart funcione de manera correcta es 1/baudios en realidad
+#define BAUDIOS_R 90 // define tiempo uart para RX os 
 #define _XTAL_FREQ 4000000
 #define TIME_BUTTON 1  //ajuste tiempo pulsador para cambiar de estado
 #define TIME_MINUTE 30 //define tiempo para reset 
@@ -44,9 +45,12 @@ void init (void);
 void blink (void);
 void button  (void);
 void one_minute (void);
+void loop (void);
 
 void recieve(void);
+void recieve_os(void);
 void send(char);
 void TX_frec(void);
+char mejorBit(char,char,char);
 
 #endif	
