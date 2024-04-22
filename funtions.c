@@ -3,8 +3,10 @@
 
 void init (void){
     TRISIO = TRI;
-    GPIO = 0; //inicia todos los gpio a cero
     TX = HIGH;
+    
+
+
     
     T0CS = 0;         // Timer0 Clock Source Select bit: Internal instruction cycle clock (CLKOUT)
     PSA = 0;          // Prescaler Assignment bit: Prescaler is assigned to the Timer0 module
@@ -17,6 +19,17 @@ void init (void){
     
     GIE = 1;          // Enable Global Interrupt Enable bit
     
+    INTE = 0;
+    PEIE=0;
+    GPIE = 1;
+    GPIF = 0;
+    //pin con interrup
+    IOC0 = 0;
+    IOC1 = 0;
+    IOC2 = 1;
+    IOC3 = 0;
+    IOC4 = 0;
+    IOC5 = 0;
 }
 
 
@@ -37,7 +50,7 @@ void button  (void){
         __delay_us(20);//evita efecto rebote
     
         if(count==0 && state==ESPERA && (BOTON==1) ){ //inicia cuenta si esta en inicio
-            state=F1K; //opcional inicia al momento del click en el estado F1K
+            //state=F1K; //opcional inicia al momento del click en el estado F1K
             count=1;}
 
         if(count==0 && (state!=ESPERA) && (BOTON==1) ){ //reinicia estado 0 si se preciona en funcionamiento
@@ -64,4 +77,33 @@ void one_minute (void){
         state=ESPERA;
     if ( BOTON==1 )
         count=0;
+}
+
+
+void loop (void){
+     switch(state) {
+            case ESPERA:
+                BUZZ = 0;
+                break;
+            case F1K:
+                BUZZ ^= 1;
+                __delay_us(TIME_FREC*16);
+                break;
+            case F2K:
+                BUZZ ^= 1;
+                __delay_us(TIME_FREC*8);
+            break;
+            case F4K:
+                BUZZ ^= 1;
+                __delay_us(TIME_FREC*4);
+               break;
+            case F8K:
+                BUZZ ^= 1;
+                __delay_us(TIME_FREC*2);
+                break;
+             case F16K:
+                BUZZ ^= 1;
+                __delay_us(TIME_FREC);
+                break;
+             default:state=ESPERA;}
 }
