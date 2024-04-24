@@ -16,10 +16,15 @@ enum STATES{LOW,HIGH}; //para declarar estados mas claro
 
 #define BAUDIOS 100 //define tiempo para uart funcione de manera correcta es 1/baudios en realidad
 #define BAUDIOS_R 90 // define tiempo uart para RX os 
+
 #define _XTAL_FREQ 4000000
+
 #define TIME_BUTTON 1  //ajuste tiempo pulsador para cambiar de estado
-#define TIME_MINUTE 30 //define tiempo para reset 
+#define TIME_BLINK 50  //ajusta tiempo parpadeo
+#define TIME_MINUTE 29 //define tiempo para reset
 #define TIME_FREC  32 //ajusta tiempo frecuencia 
+#define TIME_TOIF 16 //ajusta tiempo timer 0 para que dure 1 segundo
+
 
 //varibles globales
 char state = ESPERA;  //estado maquina
