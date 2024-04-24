@@ -4,7 +4,7 @@
 void init (void){
     TRISIO = TRI;
     TX = HIGH;
-    
+    CMCON = 0x07; //apaga comparadores
 
 
     
@@ -38,8 +38,8 @@ void blink  (void){
     static unsigned char sp = ESPERA;
     if (sp != state){
         sp=state;
-        LED=HIGH;}
-    else
+        LED=HIGH;
+        __delay_ms(TIME_BLINK);}
         LED=LOW;
 }
 
@@ -62,7 +62,7 @@ void button  (void){
             count++;
 
         if(count >= TIME_BUTTON){ //aumenta el estado
-            (state>F16K) ? state=F1K : state++;
+            (state>=F16K) ? state=F1K : state++;
             count=1;}
     } else
         count=0;  //reinicia al soltar
