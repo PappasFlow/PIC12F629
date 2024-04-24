@@ -71,7 +71,7 @@ void TX_frec(void){
     send(13);//enter
 }
 
-
+/*
 void recieve(void){           //sin sobremuestreo
     union CharBits dato;
     __delay_us(BAUDIOS);
@@ -93,12 +93,11 @@ void recieve(void){           //sin sobremuestreo
     if(dato.byte == 'x') //tecla de escape
         state = ESPERA;
 }
-
+*/
 
 
 void recieve_os(void){                    //con sobremuestreo
     union CharBits dato0,dato1,dato2;
-    
     __delay_us(BAUDIOS_R);
     dato0.bit0= RX;
     __delay_us(10);
