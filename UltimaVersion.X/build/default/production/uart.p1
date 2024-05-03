@@ -1,0 +1,371 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"24 ./header.h
+[; ;./header.h: 24: char state = ESPERA;
+[c E2 0 1 2 3 4 5 .. ]
+[n E2 ESTADOS ESPERA F1K F2K F4K F8K F16K  ]
+"6 uart.c
+[; ;uart.c: 6:     struct {
+[s S74 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S74 . bit0 bit1 bit2 bit3 bit4 bit5 bit6 bit7 ]
+"4
+[; ;uart.c: 4: union CharBits {
+[u S73 `uc 1 `S74 1 ]
+[n S73 CharBits byte . ]
+"1389 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1389: extern volatile __bit GPIO4 __attribute__((address(0x2C)));
+[v _GPIO4 `Vb ~T0 @X0 0 e@44 ]
+"22 uart.c
+[; ;uart.c: 22:      GPIO4 =LOW;
+[c E9 0 1 .. ]
+[n E9 STATES LOW HIGH  ]
+[v F175 `(v ~T0 @X0 1 tf1`ul ]
+"20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
+[v __delay `JF175 ~T0 @X0 0 e ]
+[p i __delay ]
+"1380 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1380: extern volatile __bit GPIO1 __attribute__((address(0x29)));
+[v _GPIO1 `Vb ~T0 @X0 0 e@41 ]
+"24 ./header.h
+[; ;./header.h: 24: char state = ESPERA;
+[v _state `uc ~T0 @X0 1 e ]
+[i _state
+-> . `E2 0 `uc
+]
+"28
+[p x FOSC  =  INTRCIO    ]
+"29
+[p x WDTE  =  OFF        ]
+"30
+[p x PWRTE  =  OFF       ]
+"31
+[p x MCLRE  =  OFF       ]
+"32
+[p x BOREN  =  ON        ]
+"33
+[p x CP  =  OFF          ]
+"34
+[p x CPD  =  OFF         ]
+"54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"74
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 74: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"94
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 94: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"114
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 114: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"200
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 200: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"220
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 220: __asm("GPIO equ 05h");
+[; <" GPIO equ 05h ;# ">
+"308
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 308: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"328
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 328: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"406
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 406: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"454
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 454: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"461
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 461: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"481
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 481: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"501
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 501: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"566
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 566: __asm("CMCON equ 019h");
+[; <" CMCON equ 019h ;# ">
+"625
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 625: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"695
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 695: __asm("TRISIO equ 085h");
+[; <" TRISIO equ 085h ;# ">
+"745
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 745: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"793
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 793: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"827
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 827: __asm("OSCCAL equ 090h");
+[; <" OSCCAL equ 090h ;# ">
+"887
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 887: __asm("WPU equ 095h");
+[; <" WPU equ 095h ;# ">
+"932
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 932: __asm("IOC equ 096h");
+[; <" IOC equ 096h ;# ">
+"937
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 937: __asm("IOCB equ 096h");
+[; <" IOCB equ 096h ;# ">
+"1106
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1106: __asm("VRCON equ 099h");
+[; <" VRCON equ 099h ;# ">
+"1166
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1166: __asm("EEDATA equ 09Ah");
+[; <" EEDATA equ 09Ah ;# ">
+"1171
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1171: __asm("EEDAT equ 09Ah");
+[; <" EEDAT equ 09Ah ;# ">
+"1204
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1204: __asm("EEADR equ 09Bh");
+[; <" EEADR equ 09Bh ;# ">
+"1224
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1224: __asm("EECON1 equ 09Ch");
+[; <" EECON1 equ 09Ch ;# ">
+"1262
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1262: __asm("EECON2 equ 09Dh");
+[; <" EECON2 equ 09Dh ;# ">
+"17 uart.c
+[; ;uart.c: 17: union CharBits datosend;
+[v _datosend `S73 ~T0 @X0 1 e ]
+"18
+[; ;uart.c: 18: union CharBits dato;
+[v _dato `S73 ~T0 @X0 1 e ]
+"20
+[; ;uart.c: 20: void send(char ch){
+[v _send `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _send ]
+[v _ch `uc ~T0 @X0 1 r1 ]
+[f ]
+"21
+[; ;uart.c: 21:     datosend.byte = ch;
+[e = . _datosend 0 _ch ]
+"22
+[; ;uart.c: 22:      GPIO4 =LOW;
+[e = _GPIO4 -> . `E9 0 `b ]
+"23
+[; ;uart.c: 23:      _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"24
+[; ;uart.c: 24:      GPIO4 =(__bit)datosend.bit0;
+[e = _GPIO4 -> -> . . _datosend 1 0 `b `b ]
+"25
+[; ;uart.c: 25:      _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"26
+[; ;uart.c: 26:      GPIO4 =(__bit)datosend.bit1;
+[e = _GPIO4 -> -> . . _datosend 1 1 `b `b ]
+"27
+[; ;uart.c: 27:      _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"28
+[; ;uart.c: 28:      GPIO4 =(__bit)datosend.bit2;
+[e = _GPIO4 -> -> . . _datosend 1 2 `b `b ]
+"29
+[; ;uart.c: 29:      _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"30
+[; ;uart.c: 30:      GPIO4 =(__bit)datosend.bit3;
+[e = _GPIO4 -> -> . . _datosend 1 3 `b `b ]
+"31
+[; ;uart.c: 31:      _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"32
+[; ;uart.c: 32:      GPIO4 =(__bit)datosend.bit4;
+[e = _GPIO4 -> -> . . _datosend 1 4 `b `b ]
+"33
+[; ;uart.c: 33:      _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"34
+[; ;uart.c: 34:      GPIO4 =(__bit)datosend.bit5;
+[e = _GPIO4 -> -> . . _datosend 1 5 `b `b ]
+"35
+[; ;uart.c: 35:      _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"36
+[; ;uart.c: 36:      GPIO4 =(__bit)datosend.bit6;
+[e = _GPIO4 -> -> . . _datosend 1 6 `b `b ]
+"37
+[; ;uart.c: 37:      _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"38
+[; ;uart.c: 38:      GPIO4 =(__bit)datosend.bit7;
+[e = _GPIO4 -> -> . . _datosend 1 7 `b `b ]
+"39
+[; ;uart.c: 39:      _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"40
+[; ;uart.c: 40:      GPIO4 =HIGH;
+[e = _GPIO4 -> . `E9 1 `b ]
+"41
+[; ;uart.c: 41: }
+[e :UE 75 ]
+}
+"43
+[; ;uart.c: 43: void recieve(void){
+[v _recieve `(v ~T0 @X0 1 ef ]
+{
+[e :U _recieve ]
+[f ]
+"44
+[; ;uart.c: 44:     _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"45
+[; ;uart.c: 45:     dato.bit0= GPIO1;
+[e = . . _dato 1 0 -> _GPIO1 `uc ]
+"46
+[; ;uart.c: 46:     _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"47
+[; ;uart.c: 47:     dato.bit1= GPIO1;
+[e = . . _dato 1 1 -> _GPIO1 `uc ]
+"48
+[; ;uart.c: 48:     _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"49
+[; ;uart.c: 49:     dato.bit2= GPIO1;
+[e = . . _dato 1 2 -> _GPIO1 `uc ]
+"50
+[; ;uart.c: 50:     _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"51
+[; ;uart.c: 51:     dato.bit3= GPIO1;
+[e = . . _dato 1 3 -> _GPIO1 `uc ]
+"52
+[; ;uart.c: 52:     _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"53
+[; ;uart.c: 53:     dato.bit4= GPIO1;
+[e = . . _dato 1 4 -> _GPIO1 `uc ]
+"54
+[; ;uart.c: 54:     _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"55
+[; ;uart.c: 55:     dato.bit5= GPIO1;
+[e = . . _dato 1 5 -> _GPIO1 `uc ]
+"56
+[; ;uart.c: 56:     _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"57
+[; ;uart.c: 57:     dato.bit6= GPIO1;
+[e = . . _dato 1 6 -> _GPIO1 `uc ]
+"58
+[; ;uart.c: 58:     _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"59
+[; ;uart.c: 59:     dato.bit7= GPIO1;
+[e = . . _dato 1 7 -> _GPIO1 `uc ]
+"60
+[; ;uart.c: 60:     if(dato.byte == 'c')
+[e $ ! == -> . _dato 0 `ui -> 99 `ui 77  ]
+"61
+[; ;uart.c: 61:         state = ESPERA;
+[e = _state -> . `E2 0 `uc ]
+[e :U 77 ]
+"64
+[; ;uart.c: 64: }
+[e :UE 76 ]
+}
+"67
+[; ;uart.c: 67: void TX_frec(void){
+[v _TX_frec `(v ~T0 @X0 1 ef ]
+{
+[e :U _TX_frec ]
+[f ]
+"68
+[; ;uart.c: 68:     send('F');
+[e ( _send (1 -> -> 70 `ui `uc ]
+"69
+[; ;uart.c: 69:     send('=');
+[e ( _send (1 -> -> 61 `ui `uc ]
+"70
+[; ;uart.c: 70:     switch(state) {
+[e $U 80  ]
+{
+"71
+[; ;uart.c: 71:         case F1K:
+[e :U 81 ]
+"72
+[; ;uart.c: 72:             send('1');
+[e ( _send (1 -> -> 49 `ui `uc ]
+"73
+[; ;uart.c: 73:             break;
+[e $U 79  ]
+"74
+[; ;uart.c: 74:         case F2K:
+[e :U 82 ]
+"75
+[; ;uart.c: 75:             send('2');
+[e ( _send (1 -> -> 50 `ui `uc ]
+"76
+[; ;uart.c: 76:             break;
+[e $U 79  ]
+"77
+[; ;uart.c: 77:         case F4K:
+[e :U 83 ]
+"78
+[; ;uart.c: 78:             send('4');
+[e ( _send (1 -> -> 52 `ui `uc ]
+"79
+[; ;uart.c: 79:             break;
+[e $U 79  ]
+"80
+[; ;uart.c: 80:         case F8K:
+[e :U 84 ]
+"81
+[; ;uart.c: 81:             send('8');
+[e ( _send (1 -> -> 56 `ui `uc ]
+"82
+[; ;uart.c: 82:             break;
+[e $U 79  ]
+"83
+[; ;uart.c: 83:         case F16K:
+[e :U 85 ]
+"84
+[; ;uart.c: 84:             send('1');
+[e ( _send (1 -> -> 49 `ui `uc ]
+"85
+[; ;uart.c: 85:             send('6');
+[e ( _send (1 -> -> 54 `ui `uc ]
+"86
+[; ;uart.c: 86:             break;
+[e $U 79  ]
+"87
+[; ;uart.c: 87:         default:
+[e :U 86 ]
+"88
+[; ;uart.c: 88:             send('0');
+[e ( _send (1 -> -> 48 `ui `uc ]
+"89
+[; ;uart.c: 89:     }
+}
+[e $U 79  ]
+[e :U 80 ]
+[e [\ _state , $ . `E2 1 81
+ , $ . `E2 2 82
+ , $ . `E2 3 83
+ , $ . `E2 4 84
+ , $ . `E2 5 85
+ 86 ]
+[e :U 79 ]
+"90
+[; ;uart.c: 90:     send('K');
+[e ( _send (1 -> -> 75 `ui `uc ]
+"91
+[; ;uart.c: 91:     send('H');
+[e ( _send (1 -> -> 72 `ui `uc ]
+"92
+[; ;uart.c: 92:     send('z');
+[e ( _send (1 -> -> 122 `ui `uc ]
+"93
+[; ;uart.c: 93:     send(13);
+[e ( _send (1 -> -> 13 `i `uc ]
+"94
+[; ;uart.c: 94: }
+[e :UE 78 ]
+}

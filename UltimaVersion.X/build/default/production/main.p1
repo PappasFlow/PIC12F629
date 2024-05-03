@@ -1,0 +1,334 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"24 ./header.h
+[; ;./header.h: 24: char state = ESPERA;
+[c E2 0 1 2 3 4 5 .. ]
+[n E2 ESTADOS ESPERA F1K F2K F4K F8K F16K  ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"1407 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1407: extern volatile __bit IOC1 __attribute__((address(0x4B1)));
+[v _IOC1 `Vb ~T0 @X0 0 e@1201 ]
+"1380
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1380: extern volatile __bit GPIO1 __attribute__((address(0x29)));
+[v _GPIO1 `Vb ~T0 @X0 0 e@41 ]
+"48 ./header.h
+[; ;./header.h: 48: void recieve(void);
+[v _recieve `(v ~T0 @X0 0 ef ]
+"1473 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1473: extern volatile __bit T0IF __attribute__((address(0x5A)));
+[v _T0IF `Vb ~T0 @X0 0 e@90 ]
+"44 ./header.h
+[; ;./header.h: 44: void blink (void);
+[v _blink `(v ~T0 @X0 0 ef ]
+"50
+[; ;./header.h: 50: void TX_frec(void);
+[v _TX_frec `(v ~T0 @X0 0 ef ]
+"45
+[; ;./header.h: 45: void button (void);
+[v _button `(v ~T0 @X0 0 ef ]
+"46
+[; ;./header.h: 46: void one_minute (void);
+[v _one_minute `(v ~T0 @X0 0 ef ]
+"72 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 72: extern volatile unsigned char TMR0 __attribute__((address(0x001)));
+[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
+[p mainexit ]
+"42 ./header.h
+[; ;./header.h: 42: void init (void);
+[v _init `(v ~T0 @X0 0 ef ]
+"1392 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1392: extern volatile __bit GPIO5 __attribute__((address(0x2D)));
+[v _GPIO5 `Vb ~T0 @X0 0 e@45 ]
+[v F175 `(v ~T0 @X0 1 tf1`ul ]
+"20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
+[v __delay `JF175 ~T0 @X0 0 e ]
+[p i __delay ]
+"24 ./header.h
+[; ;./header.h: 24: char state = ESPERA;
+[v _state `uc ~T0 @X0 1 e ]
+[i _state
+-> . `E2 0 `uc
+]
+"28
+[p x FOSC  =  INTRCIO    ]
+"29
+[p x WDTE  =  OFF        ]
+"30
+[p x PWRTE  =  OFF       ]
+"31
+[p x MCLRE  =  OFF       ]
+"32
+[p x BOREN  =  ON        ]
+"33
+[p x CP  =  OFF          ]
+"34
+[p x CPD  =  OFF         ]
+"54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"74
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 74: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"94
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 94: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"114
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 114: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"200
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 200: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"220
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 220: __asm("GPIO equ 05h");
+[; <" GPIO equ 05h ;# ">
+"308
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 308: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"328
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 328: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"406
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 406: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"454
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 454: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"461
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 461: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"481
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 481: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"501
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 501: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"566
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 566: __asm("CMCON equ 019h");
+[; <" CMCON equ 019h ;# ">
+"625
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 625: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"695
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 695: __asm("TRISIO equ 085h");
+[; <" TRISIO equ 085h ;# ">
+"745
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 745: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"793
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 793: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"827
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 827: __asm("OSCCAL equ 090h");
+[; <" OSCCAL equ 090h ;# ">
+"887
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 887: __asm("WPU equ 095h");
+[; <" WPU equ 095h ;# ">
+"932
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 932: __asm("IOC equ 096h");
+[; <" IOC equ 096h ;# ">
+"937
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 937: __asm("IOCB equ 096h");
+[; <" IOCB equ 096h ;# ">
+"1106
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1106: __asm("VRCON equ 099h");
+[; <" VRCON equ 099h ;# ">
+"1166
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1166: __asm("EEDATA equ 09Ah");
+[; <" EEDATA equ 09Ah ;# ">
+"1171
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1171: __asm("EEDAT equ 09Ah");
+[; <" EEDAT equ 09Ah ;# ">
+"1204
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1204: __asm("EEADR equ 09Bh");
+[; <" EEADR equ 09Bh ;# ">
+"1224
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1224: __asm("EECON1 equ 09Ch");
+[; <" EECON1 equ 09Ch ;# ">
+"1262
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f629.h: 1262: __asm("EECON2 equ 09Dh");
+[; <" EECON2 equ 09Dh ;# ">
+[v $root$_ISR `(v ~T0 @X0 0 e ]
+"4 main.c
+[; ;main.c: 4: void __attribute__((picinterrupt(("")))) ISR() {
+[v _ISR `(v ~T1 @X0 1 ef ]
+{
+[e :U _ISR ]
+[f ]
+"6
+[; ;main.c: 6:    if (IOC1 && !GPIO1) {
+[e $ ! && _IOC1 ! _GPIO1 74  ]
+{
+"7
+[; ;main.c: 7:     recieve();
+[e ( _recieve ..  ]
+"8
+[; ;main.c: 8:     IOC1 = 0;
+[e = _IOC1 -> -> 0 `i `b ]
+"9
+[; ;main.c: 9: }
+}
+[e :U 74 ]
+"10
+[; ;main.c: 10:     if (T0IF) {
+[e $ ! _T0IF 75  ]
+{
+"11
+[; ;main.c: 11:          static char contador = 0;
+[v F648 `uc ~T0 @X0 1 s contador ]
+[i F648
+-> -> 0 `i `uc
+]
+"12
+[; ;main.c: 12:          blink();
+[e ( _blink ..  ]
+"13
+[; ;main.c: 13:          if(contador >= 16){
+[e $ ! >= -> F648 `i -> 16 `i 76  ]
+{
+"14
+[; ;main.c: 14:              TX_frec();
+[e ( _TX_frec ..  ]
+"15
+[; ;main.c: 15:              contador=0;
+[e = F648 -> -> 0 `i `uc ]
+"16
+[; ;main.c: 16:              button();
+[e ( _button ..  ]
+"17
+[; ;main.c: 17:              one_minute();
+[e ( _one_minute ..  ]
+"18
+[; ;main.c: 18:          } else
+}
+[e $U 77  ]
+[e :U 76 ]
+"19
+[; ;main.c: 19:              contador++;
+[e ++ F648 -> -> 1 `i `uc ]
+[e :U 77 ]
+"20
+[; ;main.c: 20:          TMR0 = 0;
+[e = _TMR0 -> -> 0 `i `uc ]
+"21
+[; ;main.c: 21:          T0IF=0;
+[e = _T0IF -> -> 0 `i `b ]
+"22
+[; ;main.c: 22:     }
+}
+[e :U 75 ]
+"24
+[; ;main.c: 24: }
+[e :UE 73 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"30
+[; ;main.c: 30: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"31
+[; ;main.c: 31:     init();
+[e ( _init ..  ]
+"32
+[; ;main.c: 32:     while(1){
+[e :U 80 ]
+{
+"33
+[; ;main.c: 33:          switch(state) {
+[e $U 83  ]
+{
+"34
+[; ;main.c: 34:             case ESPERA:
+[e :U 84 ]
+"35
+[; ;main.c: 35:                 GPIO5 = 0;
+[e = _GPIO5 -> -> 0 `i `b ]
+"36
+[; ;main.c: 36:                 break;
+[e $U 82  ]
+"37
+[; ;main.c: 37:             case F1K:
+[e :U 85 ]
+"38
+[; ;main.c: 38:                 GPIO5 ^= 1;
+[e =^ _GPIO5 -> -> -> 1 `i `b `Vb ]
+"39
+[; ;main.c: 39:                 _delay((unsigned long)((32*16)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> * -> 32 `i -> 16 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"40
+[; ;main.c: 40:                 break;
+[e $U 82  ]
+"41
+[; ;main.c: 41:             case F2K:
+[e :U 86 ]
+"42
+[; ;main.c: 42:                 GPIO5 ^= 1;
+[e =^ _GPIO5 -> -> -> 1 `i `b `Vb ]
+"43
+[; ;main.c: 43:                 _delay((unsigned long)((32*8)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> * -> 32 `i -> 8 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"44
+[; ;main.c: 44:             break;
+[e $U 82  ]
+"45
+[; ;main.c: 45:             case F4K:
+[e :U 87 ]
+"46
+[; ;main.c: 46:                 GPIO5 ^= 1;
+[e =^ _GPIO5 -> -> -> 1 `i `b `Vb ]
+"47
+[; ;main.c: 47:                 _delay((unsigned long)((32*4)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> * -> 32 `i -> 4 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"48
+[; ;main.c: 48:                break;
+[e $U 82  ]
+"49
+[; ;main.c: 49:             case F8K:
+[e :U 88 ]
+"50
+[; ;main.c: 50:                 GPIO5 ^= 1;
+[e =^ _GPIO5 -> -> -> 1 `i `b `Vb ]
+"51
+[; ;main.c: 51:                 _delay((unsigned long)((32*2)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> * -> 32 `i -> 2 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"52
+[; ;main.c: 52:                 break;
+[e $U 82  ]
+"53
+[; ;main.c: 53:              case F16K:
+[e :U 89 ]
+"54
+[; ;main.c: 54:                 GPIO5 ^= 1;
+[e =^ _GPIO5 -> -> -> 1 `i `b `Vb ]
+"55
+[; ;main.c: 55:                 _delay((unsigned long)((32)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 32 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"56
+[; ;main.c: 56:                 break;
+[e $U 82  ]
+"57
+[; ;main.c: 57:              default:state=ESPERA;}
+[e :U 90 ]
+[e = _state -> . `E2 0 `uc ]
+}
+[e $U 82  ]
+[e :U 83 ]
+[e [\ _state , $ . `E2 0 84
+ , $ . `E2 1 85
+ , $ . `E2 2 86
+ , $ . `E2 3 87
+ , $ . `E2 4 88
+ , $ . `E2 5 89
+ 90 ]
+[e :U 82 ]
+"58
+[; ;main.c: 58:     }
+}
+[e :U 79 ]
+[e $U 80  ]
+[e :U 81 ]
+"60
+[; ;main.c: 60: }
+[e :UE 78 ]
+}
